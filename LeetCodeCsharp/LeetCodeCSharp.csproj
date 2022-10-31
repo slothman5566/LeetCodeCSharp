@@ -41,6 +41,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="P994_RottingOranges.cs" />
+    <Compile Include="Common\ArrayHelper.cs" />
+    <Compile Include="P200_NumberOfIslands.cs" />
+    <Compile Include="P098_ValidateBinarySearchTree.cs" />
+    <Compile Include="P151_MinStack.cs" />
+    <Compile Include="P238_ProductOfArrayExceptSelf.cs" />
+    <Compile Include="Common\TrieNode.cs" />
+    <Compile Include="P208_ImplementTriePrefixTree.cs" />
+    <Compile Include="P207_CourseSchedule.cs" />
+    <Compile Include="P150_EvaluateReversePolishNotation.cs" />
+    <Compile Include="P133_CloneGraph.cs" />
+    <Compile Include="Common\Node.cs" />
+    <Compile Include="P102_BinaryTreeLevelOrderTraversal.cs" />
+    <Compile Include="P015_3Sum.cs" />
+    <Compile Include="P003_LongestSubstringWithoutRepeatingCharacters.cs" />
+    <Compile Include="P973_KClosestPointsToOrigin.cs" />
+    <Compile Include="P542_01Matrix.cs" />
+    <Compile Include="P057_InsertInterval.cs" />
+    <Compile Include="P053_MaximumSubarray.cs" />
+    <Compile Include="P977_SquaresOfASortedArray.cs" />
+    <Compile Include="Common\Heap.cs" />
+    <Compile Include="P572_SubtreeOfAnotherTree.cs" />
+    <Compile Include="P190_ReverseBits.cs" />
+    <Compile Include="P108_ConvertSortedArrayToBinarySearchTree.cs" />
+    <Compile Include="P009_PalindromeNumber.cs" />
+    <Compile Include="P268_MissingNumber.cs" />
+    <Compile Include="P101_SymmetricTree.cs" />
+    <Compile Include="P283_MoveZeroes.cs" />
+    <Compile Include="P234_PalindromeLinkedList.cs" />
+    <Compile Include="P136_SingleNumber.cs" />
+    <Compile Include="P014_LongestCommonPrefix.cs" />
     <Compile Include="P191_NumberOf1Bits.cs" />
     <Compile Include="P100_SameTree.cs" />
     <Compile Include="P338_CountingBits.cs" />
