@@ -10,6 +10,6 @@ namespace LeetCodeCSharp
     {
         public Dictionary<char, TrieNode> Children { get; } = new Dictionary<char, TrieNode>();
 
-        public bool IsFinished { get; set; }
+        public bool IsFinished;
     }
 }

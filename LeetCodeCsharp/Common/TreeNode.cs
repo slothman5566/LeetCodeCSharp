@@ -40,11 +40,20 @@ namespace LeetCodeCSharp
 
                 }
 
-                if (node[i] != null && (i * 2 + 1) < node.Count - 1)
+                if (node[i] != null )
                 {
                     var temp = (int)Math.Pow(2, depth);
-                    node[i].left = node[i * 2 + 1];
-                    node[i].right = node[i * 2 + 2];
+                    if((i * 2 + 1) <= node.Count - 1)
+                    {
+                        node[i].left = node[i * 2 + 1];
+                    }
+                    if((i * 2 + 2) <= node.Count - 1)
+                    {
+                        node[i].right = node[i * 2 + 2];
+                    }
+
+                   
+                   
                 }
 
 

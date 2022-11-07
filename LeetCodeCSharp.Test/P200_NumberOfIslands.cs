@@ -15,8 +15,9 @@ namespace LeetCodeCSharp.Test
             grid[1] = new char[5] { '1', '1', '0', '0', '0' };
             grid[2] = new char[5] { '0', '0', '1', '0', '0' };
             grid[3] = new char[5] { '0', '0', '0', '1', '1' };
+            Assert.AreEqual(3, _Solution.NumIslandsByUF(grid));
             Assert.AreEqual(3, _Solution.NumIslands(grid));
-           
+          
         }
 
         [TestMethod]
@@ -27,6 +28,7 @@ namespace LeetCodeCSharp.Test
             grid[1] = new char[5] { '1', '1', '0', '1', '0' };
             grid[2] = new char[5] { '1', '1', '0', '0', '0' };
             grid[3] = new char[5] { '0', '0', '0', '0', '0' };
+            Assert.AreEqual(1, _Solution.NumIslandsByUF(grid));
             Assert.AreEqual(1, _Solution.NumIslands(grid));
 
         }

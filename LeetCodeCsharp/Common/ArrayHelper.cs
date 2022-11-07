@@ -15,17 +15,55 @@ namespace LeetCodeCSharp
             var splits = input.Split(',');
             foreach (var split in splits)
             {
-                var temp = split;
+                var temp = split.Trim();
                 if (split.Contains("["))
                 {
-                    temp = split.Substring(1);
+                    temp = temp.Substring(1);
                     result.Add(new List<int>());
                 }
-                else if (split.Contains(']'))
+                if (split.Contains(']'))
                 {
-                    temp = split.Substring(0, split.Length - 1);
+                    temp = temp.Substring(0, temp.Length - 1);
                 }
-                result.Last().Add(Convert.ToInt32(temp));
+                var n = 0;
+                if(int.TryParse(temp,out n))
+                {
+                    result.Last().Add(n);
+                }
+              
+             
+            }
+            return result.Select(x => x.ToArray()).ToArray();
+        }
+
+        public static char[][] ConvertStringToCharArrayOfArrays(string input)
+        {
+            var result = new List<List<char>>();
+            var splits = input.Split(',');
+            foreach (var split in splits)
+            {
+                var temp = split.Trim();
+                if (split.Contains("["))
+                {
+                    temp = temp.Substring(1);
+                    result.Add(new List<char>());
+                }
+                if (split.Contains(']'))
+                {
+                    temp = temp.Substring(0, temp.Length - 1);
+                }
+                if (split.Contains('\''))
+                {
+                    temp = temp.Substring(1);
+                    temp = temp.Substring(0, temp.Length - 1);
+                }
+                char n ;
+                if (char.TryParse(temp, out n))
+                {
+                    result.Last().Add(n);
+                }
+
+
             }
             return result.Select(x => x.ToArray()).ToArray();
         }
