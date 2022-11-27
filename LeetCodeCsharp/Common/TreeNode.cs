@@ -24,39 +24,24 @@ namespace LeetCodeCSharp
                 }
                 return new TreeNode(x.Value);
             }).ToList();
+;
 
-            var depth = 0;
-            var count = 0;
-            for (var i = 0; i < node.Count; i++)
+            for (var i = 1; i < node.Count; i++)
             {
-                if (i > count)
-                {
-                    depth++;
-                    count += (int)Math.Pow(2, depth);
-                    if (count == node.Count - 1)
-                    {
-                        break;
-                    }
-
-                }
+               
 
                 if (node[i] != null )
                 {
-                    var temp = (int)Math.Pow(2, depth);
-                    if((i * 2 + 1) <= node.Count - 1)
-                    {
-                        node[i].left = node[i * 2 + 1];
-                    }
-                    if((i * 2 + 2) <= node.Count - 1)
-                    {
-                        node[i].right = node[i * 2 + 2];
-                    }
-
                    
+                    if (i % 2 == 1)
+                    {
+                        node[(i-1) / 2].left = node[i];
+                    }
+                    else if(i%2==0){
+                        node[(i-1) / 2].right = node[i];
+                    }
                    
                 }
-
-
 
             }
             return node.First();

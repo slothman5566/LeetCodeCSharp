@@ -7,13 +7,7 @@ namespace LeetCodeCSharp.Test
     public class P572_SubtreeOfAnotherTree
     {
         Solution _Solution = new Solution();
-        [TestMethod]
-        public void TestMethod1()
-        {
-          Assert.IsTrue(  _Solution.IsSubtree(TreeNode.BuildTreeNode(new System.Collections.Generic.List<int?>() { 1, null, 1, null, 1, null, 1, null, 1, null, 1, null, 1, null, 1, null, 1, null, 1, null, 1, 2 }),
-                TreeNode.BuildTreeNode(new System.Collections.Generic.List<int?>() { 1, null, 1, null, 1, null, 1, null, 1, null, 1, 2 }
-                )));
-        }
+
 
         [TestMethod]
         public void TestMethod2()

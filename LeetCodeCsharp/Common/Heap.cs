@@ -13,15 +13,15 @@ namespace LeetCodeCSharp
     }
     public class Heap<T>
     {
-        private readonly List<T> _elements;
-        private int _size;
+        private readonly List<T> _Elements;
+        private int _Size;
         protected HeapType _HeapType;
         private Func<T, T, bool> _CompareFunc;
         protected Comparer<T> _Comparer { get; private set; } = Comparer<T>.Default;
-        public Heap(int size, Comparer<T> comparer, HeapType type=HeapType.Min)
+        public Heap( Comparer<T> comparer, HeapType type=HeapType.Min)
         {
            
-            _elements = new List<T>();
+            _Elements = new List<T>();
             _HeapType = type;
             _Comparer = comparer;
             switch (_HeapType)
@@ -40,42 +40,42 @@ namespace LeetCodeCSharp
         private int GetRightChildIndex(int elementIndex) => 2 * elementIndex + 2;
         private int GetParentIndex(int elementIndex) => (elementIndex - 1) / 2;
 
-        private bool HasLeftChild(int elementIndex) => GetLeftChildIndex(elementIndex) < _size;
-        private bool HasRightChild(int elementIndex) => GetRightChildIndex(elementIndex) < _size;
+        private bool HasLeftChild(int elementIndex) => GetLeftChildIndex(elementIndex) < _Size;
+        private bool HasRightChild(int elementIndex) => GetRightChildIndex(elementIndex) < _Size;
         private bool IsRoot(int elementIndex) => elementIndex == 0;
 
-        private T GetLeftChild(int elementIndex) => _elements[GetLeftChildIndex(elementIndex)];
-        private T GetRightChild(int elementIndex) => _elements[GetRightChildIndex(elementIndex)];
-        private T GetParent(int elementIndex) => _elements[GetParentIndex(elementIndex)];
+        private T GetLeftChild(int elementIndex) => _Elements[GetLeftChildIndex(elementIndex)];
+        private T GetRightChild(int elementIndex) => _Elements[GetRightChildIndex(elementIndex)];
+        private T GetParent(int elementIndex) => _Elements[GetParentIndex(elementIndex)];
 
         private void Swap(int firstIndex, int secondIndex)
         {
-            var temp = _elements[firstIndex];
-            _elements[firstIndex] = _elements[secondIndex];
-            _elements[secondIndex] = temp;
+            var temp = _Elements[firstIndex];
+            _Elements[firstIndex] = _Elements[secondIndex];
+            _Elements[secondIndex] = temp;
         }
 
         public bool IsEmpty()
         {
-            return _size == 0;
+            return _Size == 0;
         }
 
         public T Peek()
         {
-            if (_size == 0)
+            if (_Size == 0)
                 throw new IndexOutOfRangeException();
 
-            return _elements[0];
+            return _Elements[0];
         }
 
         public T Pop()
         {
-            if (_size == 0)
+            if (_Size == 0)
                 throw new IndexOutOfRangeException();
 
-            var result = _elements[0];
-            _elements[0] = _elements[_size - 1];
-            _size--;
+            var result = _Elements[0];
+            _Elements[0] = _Elements[_Size - 1];
+            _Size--;
 
             ReCalculateDown();
 
@@ -85,9 +85,9 @@ namespace LeetCodeCSharp
 
         public void Add(T element)
         {
-            _elements.Add(element);
+            _Elements.Add(element);
         
-            _size++;
+            _Size++;
 
             ReCalculateUp();
         }
@@ -103,7 +103,7 @@ namespace LeetCodeCSharp
                     smallerIndex = GetRightChildIndex(index);
                 }
 
-                if (!_CompareFunc(_elements[smallerIndex] , _elements[index]))
+                if (!_CompareFunc(_Elements[smallerIndex] , _Elements[index]))
                 {
                     break;
                 }
@@ -115,8 +115,8 @@ namespace LeetCodeCSharp
 
         private void ReCalculateUp()
         {
-            var index = _size - 1;
-            while (!IsRoot(index) && _CompareFunc( _elements[index] , GetParent(index)))
+            var index = _Size - 1;
+            while (!IsRoot(index) && _CompareFunc( _Elements[index] , GetParent(index)))
             {
                 var parentIndex = GetParentIndex(index);
                 Swap(parentIndex, index);
@@ -124,6 +124,10 @@ namespace LeetCodeCSharp
             }
         }
 
+        public int Count()
+        {
+            return _Size;
+        }
     
     }
 }

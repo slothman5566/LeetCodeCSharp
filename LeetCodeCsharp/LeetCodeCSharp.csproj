@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,6 +42,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="P435_NonOverlappingIntervals.cs" />
+    <Compile Include="P007_ReverseInteger.cs" />
+    <Compile Include="P091_DecodeWays.cs" />
+    <Compile Include="P179_LargestNumber.cs" />
+    <Compile Include="P074_SearchA2DMatrix.cs" />
+    <Compile Include="P227_BasicCalculatorII.cs" />
+    <Compile Include="P380_InserDeleteGetRandomO1.cs" />
+    <Compile Include="P437_PathSumIII.cs" />
+    <Compile Include="P050_Pow.cs" />
+    <Compile Include="P103_BinaryTreeZigzagLevelOrderTraversal.cs" />
+    <Compile Include="P048_RotateImage.cs" />
+    <Compile Include="P221_MaximalSquare.cs" />
+    <Compile Include="P528_RandomPickWithWeight.cs" />
+    <Compile Include="P215_KthLargestElementInAnArray.cs" />
+    <Compile Include="P735_AsteroidCollision.cs" />
+    <Compile Include="P560_SubarraySumEqualsK.cs" />
+    <Compile Include="P148_SortList.cs" />
+    <Compile Include="P022_GenerateParentheses.cs" />
+    <Compile Include="P002_AddTwoNumbers.cs" />
+    <Compile Include="P055_JumpGame.cs" />
+    <Compile Include="P424_LongestRepeatingCharacterReplacement.cs" />
+    <Compile Include="P658_FindKClosestElements.cs" />
+    <Compile Include="P662_MaximumWidthOfBinaryTree.cs" />
+    <Compile Include="P525_ContiguousArray.cs" />
+    <Compile Include="P394_DecodeString.cs" />
+    <Compile Include="P189_RotateArray.cs" />
+    <Compile Include="P328_OddEvenLinkedList.cs" />
+    <Compile Include="P128_LongestConsecutiveSequence.cs" />
+    <Compile Include="P113_PathSumII.cs" />
+    <Compile Include="P210_CourseScheduleII.cs" />
     <Compile Include="P300_LongestIncreasingSubsequence.cs" />
     <Compile Include="P692_TopKFrequentWords.cs" />
     <Compile Include="P287_FindTheDuplicateNumber.cs" />
