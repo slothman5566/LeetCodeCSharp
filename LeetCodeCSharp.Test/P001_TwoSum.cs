@@ -12,7 +12,7 @@ namespace LeetCodeCSharp.Test
         [TestMethod]
         public void TestMethod1()
         {
-        
+        //test
             CollectionAssert.AreEqual(_Solution.TwoSum(new int[] { 2, 7, 11, 15 }, 9), new int[] { 0, 1 });
         }
 
