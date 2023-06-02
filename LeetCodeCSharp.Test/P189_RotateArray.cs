@@ -11,7 +11,7 @@ namespace LeetCodeCSharp.Test
         public void TestMethod1()
         {
             var nums = new int[] { 1, 2, 3, 4, 5, 6, 7 };
-                _Solution.Rotate(nums, 3);
+            _Solution.Rotate(nums, 3);
             CollectionAssert.AreEqual(nums, new int[] { 5, 6, 7, 1, 2, 3, 4 });
         }
     }

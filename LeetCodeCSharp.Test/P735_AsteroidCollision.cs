@@ -51,7 +51,7 @@ namespace LeetCodeCSharp.Test
         public void TestMethod6()
         {
             var result = _Solution.AsteroidCollision(new int[] { -2, -2, -1, 2 });
-            var ans = new int[] { -2, -1, -1, 2 };
+            var ans = new int[] { -2, -2, -1, 2 };
             CollectionAssert.AreEqual(result, ans);
         }
     }
