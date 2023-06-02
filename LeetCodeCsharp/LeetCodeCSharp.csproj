@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="P061_RotateList.cs" />
     <Compile Include="P435_NonOverlappingIntervals.cs" />
     <Compile Include="P007_ReverseInteger.cs" />
     <Compile Include="P091_DecodeWays.cs" />
