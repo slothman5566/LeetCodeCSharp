@@ -42,6 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="P0412_FizzBuzz.cs" />
+    <Compile Include="P026_RemoveDuplicatesFromSortedArray.cs" />
     <Compile Include="p623_AddOneRowtoTree.cs" />
     <Compile Include="P061_RotateList.cs" />
     <Compile Include="P435_NonOverlappingIntervals.cs" />

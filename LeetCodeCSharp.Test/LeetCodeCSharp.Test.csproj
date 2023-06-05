@@ -167,6 +167,8 @@
     <Compile Include="P007_ReverseInteger.cs" />
     <Compile Include="P435_NonOverlappingIntervals.cs" />
     <Compile Include="P623_AddOneRowtoTree.cs" />
+    <Compile Include="P026_RemoveDuplicatesFromSortedArray.cs" />
+    <Compile Include="P0412_FizzBuzz.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
